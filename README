@@ -1,17 +1,17 @@
 # RentaCar Express - Alquileres
 
-**Nombre:** Julio Cesar Evangelista Guillen
-**Matrícula:** 2026-1599
+Nombre:** Julio Cesar Evangelista Guillen
+Matrícula:** 2026-1599
 
 ---
 
-## Descripción
+Descripción
 
 Programa en C# (Windows Forms) para registrar alquileres de vehículos y calcular el subtotal, el descuento, el domicilio, el ITBIS y el total a pagar.
 
 ---
 
-## Datos de entrada
+Datos de entrada
 
 - Cliente y si es cliente corporativo
 - Fecha de salida
@@ -24,7 +24,7 @@ Programa en C# (Windows Forms) para registrar alquileres de vehículos y calcula
 
 ---
 
-## Proceso
+Proceso
 
 - Si el seguro es Completo, se suman RD$300 a la tarifa diaria.
 - Si se marca GPS, se suman RD$100 a la tarifa diaria.
@@ -38,7 +38,7 @@ Programa en C# (Windows Forms) para registrar alquileres de vehículos y calcula
 
 ---
 
-## Salida
+Salida
 
 - Lista de vehículos agregados
 - Subtotal
@@ -49,10 +49,10 @@ Programa en C# (Windows Forms) para registrar alquileres de vehículos y calcula
 
 ---
 
-## Capturas de pantalla en ejecución
+Capturas de pantalla en ejecución
 
-### Caso 1: Alquiler con dos vehículos
+Caso 1: Alquiler con dos vehículos
 ![Caso 1](capturas/ejecucion.png)
 
-### Caso 2: Confirmación al salir
+Caso 2: Confirmación al salir
 ![Caso 2](capturas/salir.png)

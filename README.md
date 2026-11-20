@@ -1,0 +1,58 @@
+# RentaCar Express - Alquileres
+
+**Nombre:** Julio Cesar Evangelista Guillen
+**Matrícula:** 2026-1599
+
+---
+
+## Descripción
+
+Programa en C# (Windows Forms) para registrar alquileres de vehículos y calcular el subtotal, el descuento, el domicilio, el ITBIS y el total a pagar.
+
+---
+
+## Datos de entrada
+
+- Cliente y si es cliente corporativo
+- Fecha de salida
+- Vehículo
+- Tarifa diaria
+- Días (de 1 a 30)
+- Seguro: Básico o Completo
+- Entrega: En sucursal o Domicilio
+- GPS (opcional)
+
+---
+
+## Proceso
+
+- Si el seguro es Completo, se suman RD$300 a la tarifa diaria.
+- Si se marca GPS, se suman RD$100 a la tarifa diaria.
+- Total del vehículo = tarifa diaria × días.
+- Subtotal = suma de los totales de todos los vehículos.
+- Descuento = 15 % del subtotal (solo cliente corporativo).
+- Domicilio = RD$500 una sola vez (solo si la entrega es a domicilio).
+- Base imponible = subtotal - descuento + domicilio.
+- ITBIS = 18 % de la base imponible.
+- Total a pagar = base imponible + ITBIS.
+
+---
+
+## Salida
+
+- Lista de vehículos agregados
+- Subtotal
+- Descuento
+- Domicilio
+- ITBIS
+- Total a pagar
+
+---
+
+## Capturas de pantalla en ejecución
+
+### Caso 1: Alquiler con dos vehículos
+![Caso 1](capturas/ejecucion.png)
+
+### Caso 2: Confirmación al salir
+![Caso 2](capturas/salir.png)

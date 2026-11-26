@@ -1,4 +1,4 @@
-﻿namespace Examen_RentaCar_JulioEvangelista
+namespace Examen_RentaCar_JulioEvangelista
 {
     partial class frmAlquiler
     {
@@ -217,7 +217,7 @@
             nudDias.Name = "nudDias";
             nudDias.Size = new Size(150, 27);
             nudDias.TabIndex = 14;
-            nudDias.ValueChanged += numericUpDown1_ValueChanged;
+            nudDias.ValueChanged += nudDias_ValueChanged;
             // 
             // groupBox1
             // 

@@ -14,43 +14,26 @@ namespace Examen_RentaCar_JulioEvangelista
         private void btnAgregar_Click(object sender, EventArgs e) 
         {
             int dias = Convert.ToInt32(nudDias.Value);
+    decimal tarifa = Convert.ToDecimal(txtTarifa.Text);
+    string seguro = "Basico";
 
-            if (dias >= 1 && dias <= 30)
-            {
-                decimal tarifaDiaria = Convert.ToDecimal(txtTarifa.Text);
-                string seguro = "Basico";
+    if (rbtCompleto.Checked)
+    {
+        tarifa = tarifa + 300;
+        seguro = "Completo";
+    }
 
-                // Seguro completo suma 300 a la tarifa diaria
-                if (rbtCompleto.Checked)
-                {
-                    tarifaDiaria = tarifaDiaria + 300;
-                    seguro = "Completo";
-                }
+    if (chkGps.Checked)
+    {
+        tarifa = tarifa + 100;
+    }
 
-                // GPS suma 100 por dia
-                if (chkGps.Checked)
-                {
-                    tarifaDiaria = tarifaDiaria + 100;
-                }
-                // Calcula el total del alquiler
-                decimal total = tarifaDiaria * dias;
+    decimal total = tarifa * dias;
 
-                lstAlquileres.Items.Add(dias + "   " + txtVehiculo.Text + " \"" + (seguro) + "\"   " + tarifaDiaria + "   " + total);
+    lstAlquileres.Items.Add(dias + " " + txtVehiculo.Text  + " (" + seguro + ") " + tarifa + " " + total);
 
-                subtotal = subtotal + total;
-                // Limpia después de agregar
-                txtVehiculo.Clear();
-                txtTarifa.Clear();
-                nudDias.Value = 0;
-
-                // Muestra los resultados al agregar
-                btnCalcular_Click(sender, e);
-            }
-            else
-            {
-                MessageBox.Show("Los días deben estar entre 1 y 30");
-            }
-        }
+    subtotal = subtotal + total;
+    }
         // Calcular el total a pagar
         private void btnCalcular_Click(object sender, EventArgs e)
         {
@@ -100,7 +83,7 @@ namespace Examen_RentaCar_JulioEvangelista
             DialogResult result = MessageBox.Show("¿Está seguro que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                Application.Exit();
+                this.Close();
             }
         }
 
